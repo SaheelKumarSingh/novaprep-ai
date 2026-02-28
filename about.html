@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - NovaPrep</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="global.css" rel="stylesheet">
+</head>
+
+<body class="bg-features">
+    <canvas id="background-canvas"></canvas>
+    <canvas id="cursor-canvas"></canvas>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Nova<span>Prep</span></a>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="learn-more.html">Features</a>
+                <a href="cases.html">Interviews</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="about.html" class="active">About</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="sign-in.html" class="btn btn-primary">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="cases-section">
+        <div class="page-header" style="max-width: 800px;">
+            <h2>Built by IIM Alumni and AI Pioneers.</h2>
+            <p>Our mission is to democratize access to elite MBA preparation. NovaPrep was founded by a team of alumni
+                from IIM Ahmedabad, Bangalore, Calcutta, and XLRI, in collaboration with deep-learning researchers.</p>
+        </div>
+
+        <div class="case-grid" style="grid-template-columns: 1fr; max-width: 800px; margin: 4rem auto 0;">
+            <div class="case-card">
+                <h3>The Problem</h3>
+                <p>Traditional MBA interview preparation relies on peer-to-peer mock PIs, which are highly subjective,
+                    uncalibrated, and often blind to structural logic errors or subtle behavioral tells. Expensive
+                    coaching institutes can cost upward of ₹50,000, creating an unleveled playing field for CAT
+                    aspirants.</p>
+            </div>
+            <div class="case-card">
+                <h3>Our Solution</h3>
+                <p>We trained our language models directly on thousands of successful and unsuccessful Indian B-School
+                    interview transcripts. NovaPrep's AI doesn't just listen—it builds a live decision tree of your
+                    answers, strictly evaluating you against the rigorous standards of top IIM panels in real time.</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="interactive.js"></script>
+</body>
+
+</html>
