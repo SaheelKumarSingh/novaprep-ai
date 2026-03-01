@@ -5,82 +5,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Features - NovaPrep</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="global.css" rel="stylesheet">
 </head>
 
-<body class="bg-features">
-    <canvas id="background-canvas"></canvas>
-    <canvas id="cursor-canvas"></canvas>
+<body>
+    <canvas id="cursor-canvas"
+        style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 0;"></canvas>
 
-    <nav class="navbar">
-        <div class="nav-container">
+    <!-- Ambient Geometric Background -->
+    <div class="bg-geometry">
+        <div class="iso-container">
+            <div class="iso-grid"></div>
+            <div class="iso-panel panel-1"></div>
+            <div class="iso-panel panel-2"></div>
+            <div class="iso-panel panel-3"></div>
+            <div class="glow-node n1"></div>
+            <div class="glow-node n2"></div>
+            <div class="glow-node n3"></div>
+        </div>
+    </div>
+
+    <nav class="navbar-overlay">
+        <div class="nav-left">
             <a href="index.html" class="logo">Nova<span>Prep</span></a>
-
             <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="learn-more.html" class="active">Features</a>
-                <a href="cases.html">Interviews</a>
-                <a href="pricing.html">Pricing</a>
-                <a href="about.html">About</a>
+                <a href="index.html">// Home</a>
+                <a href="learn-more.html" class="active">// Features</a>
+                <a href="cases.html">// Interviews</a>
+                <a href="pricing.html">// Pricing</a>
+                <a href="about.html">// About</a>
             </div>
-
-            <div class="nav-actions">
-                <a href="sign-in.html" class="btn btn-primary">Get Started</a>
-            </div>
+        </div>
+        <div class="nav-right">
+            <a href="sign-in.html" class="btn-solid">Get Started</a>
         </div>
     </nav>
 
-    <main class="features-section">
-        <div class="page-header">
-            <h2>The ultimate MBA admissions preparation suite.</h2>
-            <p>Our AI algorithms mirror the exact grading rubrics used by the interview panels at IIMs, FMS, SPJIMR, and
-                XLRI. No guesswork, just structured feedback.</p>
-        </div>
+    <main class="standard-page">
+        <h1 class="page-title">Algorithmic Suite.</h1>
+        <p class="page-desc">Our neural models mirror the exact grading rubrics used by the interview panels at IIMs,
+            FMS, SPJIMR, and XLRI. No guesswork, just strictly defined structural bounds and extreme behavioral
+            analysis.</p>
 
-        <div class="feature-grid">
-            <div class="f-card">
-                <div class="icon-wrap">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10" />
-                        <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
-                    </svg>
-                </div>
-                <h3>Answer Structuring</h3>
-                <p>We analyze the molecular flow of your logic. Ensure your "Why MBA?" and background-based answers are
-                    flawlessly structured and highly impactful.</p>
+        <div class="grid-layout">
+            <div class="content-card card-bracket">
+                <span class="card-badge">01</span>
+                <h3>Answer Structuring (MECE)</h3>
+                <p>We analyze the molecular flow of your logic. Every statement you make during an interview is broken
+                    down to ensure it meets the Mutually Exclusive, Collectively Exhaustive (MECE) standard required by
+                    top consulting firms and B-Schools.</p>
+                <p>Ensure your "Why MBA?" and background-based answers are flawlessly structured and highly impactful
+                    without any dead logic loops, circular arguments, or factual inconsistencies.</p>
             </div>
 
-            <div class="f-card">
-                <div class="icon-wrap">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
-                        <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
-                        <line x1="12" x2="12" y1="19" y2="22" />
-                    </svg>
-                </div>
+            <div class="content-card card-bracket">
+                <span class="card-badge">02</span>
                 <h3>Pace & Executive Presence</h3>
-                <p>Track your vocal wavelengths. We measure your speaking speed, filler word frequency (um, uh, like),
-                    and pitch variation during Extempore topics.</p>
+                <p>Track your neural wavelengths. We measure your speaking speed, filler word frequency (um, uh, like),
+                    and pitch variation during high-stakes Extempore topics to ensure absolute authority.</p>
+                <p>If you speak too fast due to nervousness, our AI will flag the exact seconds you rushed. We analyze
+                    vocal tremor and tone confidence, ensuring you project the executive presence required of a future
+                    MBA graduate.</p>
             </div>
 
-            <div class="f-card">
-                <div class="icon-wrap">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polygon
-                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                    </svg>
-                </div>
-                <h3>Simulated Stress Environment</h3>
+            <div class="content-card card-bracket">
+                <span class="card-badge">03</span>
+                <h3>Simulated Stress Loading</h3>
                 <p>Face adaptive AI profiles ranging from a supportive panelist to aggressive, cross-questioning
-                    professors typical in IIM Calcutta or FMS stress interviews.</p>
+                    professors typical in IIM Calcutta or FMS stress interviews. The ultimate trial.</p>
+                <p>The AI will interrupt you, challenge your assumptions, and ask rapid-fire follow-ups if it senses
+                    hesitation. Train under heavy cognitive load so you are fully desensitized when facing the real
+                    admission panels.</p>
             </div>
         </div>
     </main>
-
-    <script src="interactive.js"></script>
+    <script src="cursor.js"></script>
 </body>
 
 </html>

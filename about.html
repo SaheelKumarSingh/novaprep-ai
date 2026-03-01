@@ -5,59 +5,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - NovaPrep</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="global.css" rel="stylesheet">
 </head>
 
-<body class="bg-features">
-    <canvas id="background-canvas"></canvas>
-    <canvas id="cursor-canvas"></canvas>
+<body>
+    <canvas id="cursor-canvas"
+        style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 0;"></canvas>
 
-    <nav class="navbar">
-        <div class="nav-container">
+    <!-- Ambient Geometric Background -->
+    <div class="bg-geometry">
+        <div class="iso-container">
+            <div class="iso-grid"></div>
+            <div class="iso-panel panel-1"></div>
+            <div class="iso-panel panel-2"></div>
+            <div class="iso-panel panel-3"></div>
+            <div class="glow-node n1"></div>
+            <div class="glow-node n2"></div>
+            <div class="glow-node n3"></div>
+        </div>
+    </div>
+
+    <nav class="navbar-overlay">
+        <div class="nav-left">
             <a href="index.html" class="logo">Nova<span>Prep</span></a>
-
             <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="learn-more.html">Features</a>
-                <a href="cases.html">Interviews</a>
-                <a href="pricing.html">Pricing</a>
-                <a href="about.html" class="active">About</a>
+                <a href="index.html">// Home</a>
+                <a href="learn-more.html">// Features</a>
+                <a href="cases.html">// Interviews</a>
+                <a href="pricing.html">// Pricing</a>
+                <a href="about.html" class="active">// About</a>
             </div>
-
-            <div class="nav-actions">
-                <a href="sign-in.html" class="btn btn-primary">Get Started</a>
-            </div>
+        </div>
+        <div class="nav-right">
+            <a href="sign-in.html" class="btn-solid">Get Started</a>
         </div>
     </nav>
 
-    <main class="cases-section">
-        <div class="page-header" style="max-width: 800px;">
-            <h2>Built by IIM Alumni and AI Pioneers.</h2>
-            <p>Our mission is to democratize access to elite MBA preparation. NovaPrep was founded by a team of alumni
-                from IIM Ahmedabad, Bangalore, Calcutta, and XLRI, in collaboration with deep-learning researchers.</p>
-        </div>
+    <main class="standard-page" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+        <h1 class="page-title">System Architects.</h1>
+        <p class="page-desc" style="max-width: 900px;">Our mission is to democratize access to elite MBA preparation.
+            NovaPrep the algorithmic intersection built by an elite cadre of alumni from IIM Ahmedabad, Bangalore,
+            Calcutta, and XLRI in direct collaboration with deep-learning researchers.</p>
 
-        <div class="case-grid" style="grid-template-columns: 1fr; max-width: 800px; margin: 4rem auto 0;">
-            <div class="case-card">
+        <div class="grid-layout" style="text-align: left; margin-top: 2rem; width: 100%; max-width: 1000px;">
+            <div class="content-card card-bracket">
+                <span class="card-badge">ERR_LOG</span>
                 <h3>The Problem</h3>
                 <p>Traditional MBA interview preparation relies on peer-to-peer mock PIs, which are highly subjective,
                     uncalibrated, and often blind to structural logic errors or subtle behavioral tells. Expensive
                     coaching institutes can cost upward of ₹50,000, creating an unleveled playing field for CAT
                     aspirants.</p>
             </div>
-            <div class="case-card">
-                <h3>Our Solution</h3>
+
+            <div class="content-card card-bracket">
+                <span class="card-badge">COMPILE_SUCCESS</span>
+                <h3>Our Engine</h3>
                 <p>We trained our language models directly on thousands of successful and unsuccessful Indian B-School
                     interview transcripts. NovaPrep's AI doesn't just listen—it builds a live decision tree of your
                     answers, strictly evaluating you against the rigorous standards of top IIM panels in real time.</p>
             </div>
         </div>
     </main>
-
-    <script src="interactive.js"></script>
+    <script src="cursor.js"></script>
 </body>
 
 </html>

@@ -5,80 +5,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interview Library - NovaPrep</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="global.css" rel="stylesheet">
 </head>
 
-<body class="bg-features">
-    <canvas id="background-canvas"></canvas>
-    <canvas id="cursor-canvas"></canvas>
+<body>
+    <canvas id="cursor-canvas"
+        style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 0;"></canvas>
 
-    <nav class="navbar">
-        <div class="nav-container">
+    <!-- Ambient Geometric Background -->
+    <div class="bg-geometry">
+        <div class="iso-container">
+            <div class="iso-grid"></div>
+            <div class="iso-panel panel-1"></div>
+            <div class="iso-panel panel-2"></div>
+            <div class="iso-panel panel-3"></div>
+            <div class="glow-node n1"></div>
+            <div class="glow-node n2"></div>
+            <div class="glow-node n3"></div>
+        </div>
+    </div>
+
+    <nav class="navbar-overlay">
+        <div class="nav-left">
             <a href="index.html" class="logo">Nova<span>Prep</span></a>
-
             <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="learn-more.html">Features</a>
-                <a href="cases.html" class="active">Interviews</a>
-                <a href="pricing.html">Pricing</a>
-                <a href="about.html">About</a>
+                <a href="index.html">// Home</a>
+                <a href="cases.html" class="active">// Interviews</a>
+                <a href="pricing.html">// Pricing</a>
             </div>
-
-            <div class="nav-actions">
-                <a href="sign-in.html" class="btn btn-primary">Get Started</a>
-            </div>
+        </div>
+        <div class="nav-right">
+            <a href="sign-in.html" class="btn-solid">Get Started</a>
         </div>
     </nav>
 
-    <main class="cases-section">
-        <div class="page-header">
-            <h2>The Interview Vault</h2>
-            <p>Practice with dynamically generated personal interviews (PI) and situational topics mirrored directly
-                from actual recent transcripts at IIMs, XLRI, and SPJIMR.</p>
-        </div>
+    <main class="standard-page" style="max-width: 1400px;">
+        <h1 class="page-title">The Interview Vault</h1>
+        <p class="page-desc">Practice with dynamically generated personal interviews (PI) and situational topics
+            mirrored directly from actual recent transcripts at IIMs, XLRI, and SPJIMR. Prepare for the exact questions
+            the panels will throw at you.</p>
 
-        <div class="case-grid">
-            <div class="case-card">
-                <span class="case-badge">Personal Insight (PI)</span>
+        <!-- Use a slightly tighter grid to comfortably fit 2x2 side-by-side -->
+        <div class="grid-layout" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+            <div class="content-card card-bracket">
+                <span class="card-badge">Personal Insight (PI)</span>
                 <h3>The "Why MBA?" Defense</h3>
                 <p>A panel scrutinizes your transition from an engineering background into management. You must defend
                     your career trajectory, justify your gap year, and prove why you belong at a top IIM.</p>
-                <a href="sign-in.html" class="btn btn-outline">Simulate Interview</a>
+                <p><strong>Focus Areas:</strong> Logic structuring, career clarity, avoiding cliché answers about
+                    "learning management skills."</p>
+                <div style="margin-top: auto; padding-top: 1rem; width: 100%;">
+                    <a href="sign-in.html" class="btn-dark"
+                        style="padding: 0.75rem 1.5rem; font-size: 0.85rem; width: auto;">Simulate Interview</a>
+                </div>
             </div>
 
-            <div class="case-card">
-                <span class="case-badge">Situational / Ethical</span>
-                <h3>The XLRI Dilemma</h3>
+            <div class="content-card card-bracket">
+                <span class="card-badge">Situational / Ethical</span>
+                <h3>The XLRI Moral Dilemma</h3>
                 <p>You are a manager who discovers a high-performing colleague is secretly leaking minor company secrets
-                    to a startup. The board demands action. Walk the panel through your ethical reasoning and proposed
-                    steps.</p>
-                <a href="sign-in.html" class="btn btn-outline">Simulate Interview</a>
+                    to a startup. Walk the panel through your ethical reasoning and proposed steps.</p>
+                <p><strong>Focus Areas:</strong> Balancing firm loyalty with humanity, understanding corporate HR
+                    policies, and displaying unshakeable ethics.</p>
+                <div style="margin-top: auto; padding-top: 1rem; width: 100%;">
+                    <a href="sign-in.html" class="btn-dark"
+                        style="padding: 0.75rem 1.5rem; font-size: 0.85rem; width: auto;">Simulate Interview</a>
+                </div>
             </div>
 
-            <div class="case-card">
-                <span class="case-badge">Extempore Topic</span>
+            <div class="content-card card-bracket">
+                <span class="card-badge">Extempore Topic</span>
                 <h3>The FMS Rapid-Fire</h3>
                 <p>You are given 60 seconds to prepare and 2 minutes to speak on: "Is Artificial Intelligence
-                    democratizing education, or widening the inequality gap in India?" The panel will cross-question you
-                    aggressively based on your stance.</p>
-                <a href="sign-in.html" class="btn btn-outline">Simulate Interview</a>
+                    democratizing education, or widening the inequality gap in India?" Prepare for aggressive
+                    cross-questioning.</p>
+                <p><strong>Focus Areas:</strong> Speaking pace, vocal confidence, PESTLE framework application, and
+                    avoiding rapid fillers (um, uh).</p>
+                <div style="margin-top: auto; padding-top: 1rem; width: 100%;">
+                    <a href="sign-in.html" class="btn-dark"
+                        style="padding: 0.75rem 1.5rem; font-size: 0.85rem; width: auto;">Simulate Interview</a>
+                </div>
             </div>
 
-            <div class="case-card">
-                <span class="case-badge">Profile Based</span>
+            <div class="content-card card-bracket">
+                <span class="card-badge">Profile Based</span>
                 <h3>Resume Drill-Down</h3>
-                <p>The penal focuses entirely on your undergraduate projects and your single year of work experience.
-                    Prepare for a deep dive into the technicalities of your previous role and how it aligns with your
-                    post-MBA goals.</p>
-                <a href="sign-in.html" class="btn btn-outline">Simulate Interview</a>
+                <p>The panel focuses entirely on your undergraduate projects, your grades, and your single year of work
+                    experience. Prepare for a deep dive into the technicalities of your previous role.</p>
+                <p><strong>Focus Areas:</strong> Defending low academic scores, technical depth of previous work, and
+                    proving your direct impact.</p>
+                <div style="margin-top: auto; padding-top: 1rem; width: 100%;">
+                    <a href="sign-in.html" class="btn-dark"
+                        style="padding: 0.75rem 1.5rem; font-size: 0.85rem; width: auto;">Simulate Interview</a>
+                </div>
             </div>
         </div>
     </main>
-
-    <script src="interactive.js"></script>
+    <script src="cursor.js"></script>
 </body>
 
 </html>
