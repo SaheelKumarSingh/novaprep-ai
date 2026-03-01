@@ -238,22 +238,79 @@ a {
 
 .nav-links {
     display: flex;
-    gap: 2rem;
-    flex-wrap: nowrap;
+    gap: 2.5rem;
+    align-items: center;
 }
 
 .nav-links a {
+    text-decoration: none;
     font-family: var(--font-mono);
     font-size: 0.8rem;
     color: var(--text-dim);
-    text-transform: uppercase;
+    transition: color 0.2s, transform 0.2s;
     letter-spacing: 0.05em;
-    transition: color 0.2s;
-    white-space: nowrap;
+    font-weight: 400;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
+    color: var(--accent);
+}
+
+/* System Footer */
+.system-footer {
+    width: 100%;
+    margin-top: 8rem;
+    padding: 4rem 2rem 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(10, 10, 12, 0.2);
+    backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 10;
+}
+
+.footer-main {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.footer-info {
+    max-width: 300px;
+}
+
+.footer-status {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--accent);
+}
+
+.footer-nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+}
+
+.footer-col h4 {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
     color: var(--text-primary);
 }
 
@@ -577,5 +634,134 @@ a {
 
     .action-row {
         flex-direction: column;
+    }
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    transition: color 0.2s, transform 0.2s;
+    letter-spacing: 0.05em;
+    font-weight: 400;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent);
+}
+
+/* System Footer */
+.system-footer {
+    width: 100%;
+    margin-top: 8rem;
+    padding: 4rem 2rem 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(10, 10, 12, 0.2);
+    backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 10;
+}
+
+.footer-main {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.footer-info {
+    max-width: 300px;
+}
+
+.footer-status {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--accent);
+}
+
+.footer-nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+}
+
+.footer-col h4 {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.footer-col a {
+    text-decoration: none;
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    transition: color 0.2s;
+}
+
+.footer-col a:hover {
+    color: var(--accent);
+}
+
+.footer-bottom {
+    max-width: 1400px;
+    margin: 4rem auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 2rem;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.3);
+    font-family: var(--font-mono);
+}
+
+@media (max-width: 1024px) {
+    .hero-split {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .pressure-card {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .footer-nav {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 }

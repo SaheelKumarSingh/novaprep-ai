@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log In - NovaPrep</title>
+    <title>Secure Access | Initialize Neural Link - NovaPrep</title>
+    <meta name="description"
+        content="Authenticate to access the NovaPrep vault and begin your AI interview simulation. Establish your profile and prep topology.">
+    <meta name="keywords" content="login, signup, authenticate, MBA vault, secure access">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="global.css" rel="stylesheet">
     <style>
@@ -52,10 +55,25 @@
         </div>
     </div>
 
-    <div class="auth-wrapper">
-        <a href="index.html" class="logo" style="position: absolute; top: 2rem; left: 4rem;">Nova<span>Prep</span></a>
+    <nav class="navbar-overlay">
+        <div class="nav-left">
+            <a href="index.html" class="logo">Nova<span>Prep</span></a>
+            <div class="nav-links">
+                <a href="index.html">// Home</a>
+                <a href="learn-more.html">// Features</a>
+                <a href="cases.html">// Interviews</a>
+                <a href="pricing.html">// Pricing</a>
+                <a href="about.html">// About</a>
+            </div>
+        </div>
+        <div class="nav-right">
+            <a href="sign-in.html" class="btn-solid">Get Started</a>
+        </div>
+    </nav>
 
-        <div class="auth-box card-bracket">
+    <div class="auth-wrapper" style="margin-top: 80px; min-height: calc(100vh - 80px);">
+
+        <div class="auth-box card-bracket" id="login-container">
             <h2 style="font-size: 2rem; margin-bottom: 0.5rem; letter-spacing: -0.03em;">Welcome Back</h2>
             <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-dim); margin-bottom: 2rem;">//
                 AUTHENTICATE TO ACCESS PREP VAULT</p>
@@ -67,9 +85,108 @@
                 <button type="submit" class="btn-solid" style="margin-top: 1rem; padding: 1rem; width: 100%;">Log
                     In</button>
             </form>
+
+            <p style="margin-top: 2rem; text-align: center; font-size: 0.85rem; color: var(--text-dim);">
+                New to NovaPrep? <a href="#" onclick="toggleAuth('register')"
+                    style="color: var(--accent); text-decoration: none;">Initialize Account</a>
+            </p>
+        </div>
+
+        <div class="auth-box card-bracket" id="register-container" style="display: none; max-width: 480px;">
+            <h2 style="font-size: 2rem; margin-bottom: 0.5rem; letter-spacing: -0.03em;">Initialize Profile</h2>
+            <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-dim); margin-bottom: 2rem;">//
+                ESTABLISH NEURAL LINK</p>
+
+            <form class="auth-form" onsubmit="event.preventDefault(); alert('Registration simulated.');">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <input type="text" class="input-box" placeholder="Full Name" required>
+                    <input type="text" class="input-box" placeholder="DOB (YYYY-MM-DD)" onfocus="(this.type='date')"
+                        onblur="if(!this.value) this.type='text'" required>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <input type="text" class="input-box" placeholder="City" required>
+                    <input type="text" class="input-box" placeholder="Country" required>
+                </div>
+
+                <input type="email" class="input-box" placeholder="Email Address" required>
+                <input type="tel" class="input-box" placeholder="Phone Number (Optional)">
+                <input type="password" class="input-box" placeholder="Create Password" required>
+
+                <button type="submit" class="btn-solid"
+                    style="margin-top: 1rem; padding: 1rem; width: 100%;">Register</button>
+            </form>
+
+            <p style="margin-top: 2rem; text-align: center; font-size: 0.85rem; color: var(--text-dim);">
+                Already verified? <a href="#" onclick="toggleAuth('login')"
+                    style="color: var(--accent); text-decoration: none;">Access Vault</a>
+            </p>
         </div>
     </div>
+
+    <footer class="system-footer">
+        <div class="footer-main">
+            <div class="footer-info">
+                <a href="index.html" class="logo">Nova<span>Prep</span></a>
+                <p style="margin-top: 1.5rem; color: var(--text-dim); line-height: 1.6; font-size: 0.9rem;">
+                    The algorithmic intersection of admissions expertise and neural computation. Calibrated for the next
+                    generation of MBA leaders.
+                </p>
+                <div class="footer-status">
+                    <span class="status-dot"></span>
+                    // STATUS: ALL SYSTEMS NOMINAL
+                </div>
+            </div>
+
+            <div class="footer-nav">
+                <div class="footer-col">
+                    <h4>// PLATFORM</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="learn-more.html">Features</a></li>
+                        <li><a href="cases.html">Interviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>// ADMISSIONS</h4>
+                    <ul>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="sign-in.html">Initialize Link</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>// CONNECT</h4>
+                    <ul>
+                        <li><a href="#">Terminal</a></li>
+                        <li><a href="#">Neural_Net</a></li>
+                        <li><a href="#">Topology</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>&copy; 2026 NOVAPREP // QUANTUM NEURAL COMPUTING DIV.</div>
+            <div class="footer-brand">POWERED BY <span>GEMINI_ULTRA</span></div>
+        </div>
+    </footer>
+
     <script src="cursor.js"></script>
+    <script>
+        function toggleAuth(view) {
+            const login = document.getElementById('login-container');
+            const register = document.getElementById('register-container');
+
+            if (view === 'register') {
+                login.style.display = 'none';
+                register.style.display = 'flex';
+            } else {
+                login.style.display = 'flex';
+                register.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 
 </html>
