@@ -440,11 +440,21 @@ a {
 .stat-box {
     position: relative;
     padding: 1.5rem 1rem;
-    background: var(--glass-bg);
-    backdrop-filter: blur(8px);
+    background: rgba(30, 30, 35, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 0 20px rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.stat-box:hover {
+    background: rgba(45, 45, 50, 0.7);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), inset 0 0 20px rgba(255, 51, 102, 0.05);
 }
 
 .stat-box::before,
@@ -456,18 +466,27 @@ a {
     top: 0;
     left: 0;
     pointer-events: none;
+    transition: all 0.3s ease;
 }
 
 .stat-box::before {
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     clip-path: polygon(0 0, 8px 0, 8px 100%, 0 100%, 0 0, 100% 0, 100% 100%, calc(100% - 8px) 100%, calc(100% - 8px) 0, 100% 0);
 }
 
 .stat-box::after {
-    border-left: 1px solid rgba(255, 255, 255, 0.3);
-    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
     clip-path: polygon(0 0, 100% 0, 100% 8px, 0 8px, 0 0, 0 100%, 100% 100%, 100% calc(100% - 8px), 0 calc(100% - 8px), 0 100%);
+}
+
+.stat-box:hover::before {
+    border-color: var(--accent);
+}
+
+.stat-box:hover::after {
+    border-color: var(--accent);
 }
 
 .stat-val {
