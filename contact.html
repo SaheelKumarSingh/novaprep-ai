@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - NovaPrep</title>
-    <meta name="description" content="Information regarding how NovaPrep handles mock trial data and user security.">
+    <title>Contact Us - NovaPrep</title>
+    <meta name="description" content="Questions, feedback, or beta interest — reach out directly to the NovaPrep team.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="global.css" rel="stylesheet">
 </head>
@@ -36,7 +36,7 @@
                 <a href="cases.html">// Interviews</a>
                 <a href="pricing.html">// Plans</a>
                 <a href="about.html">// About</a>
-                <a href="contact.html">// Contact</a>
+                <a href="contact.html" class="active">// Contact</a>
             </div>
         </div>
         <div class="nav-right">
@@ -45,15 +45,54 @@
     </nav>
 
     <main class="standard-page" style="display: flex; flex-direction: column; min-height: calc(100vh - 80px);">
-        <h1 class="page-title">Privacy Policy</h1>
-        <p class="page-desc">Our commitment to data sovereignty and transparency.</p>
+        <h1 class="page-title">Contact</h1>
+        <p class="page-desc">Questions, feedback, or beta interest — reach out directly.</p>
+        <p
+            style="text-align: center; font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent); margin-top: -1rem; margin-bottom: 3rem;">
+            Founder-led product. All inquiries are handled directly.
+        </p>
 
-        <div class="grid-layout" style="margin-bottom: auto; max-width: 800px;">
-            <div class="content-card card-bracket">
-                <h3>Data Handling & Usage</h3>
-                <p>We do not share personal data with third parties. Any session transcripts or telemetry gathered
-                    during a simulation are localized on the network to provide real-time feedback and are not utilized
-                    for external model training or data brokering without your explicit consent.</p>
+        <div class="grid-layout"
+            style="margin-bottom: auto; max-width: 600px; margin-left: auto; margin-right: auto; width: 100%;">
+            <div class="content-card card-bracket" style="padding: 2.5rem; background: rgba(10, 10, 12, 0.8);">
+                <form onsubmit="event.preventDefault(); alert('Message sent! We will get back to you soon.');"
+                    style="display: flex; flex-direction: column; gap: 1.25rem;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <input type="text" placeholder="Name" required
+                            style="background: rgba(0,0,0,0.5); border: 1px solid var(--border-color); color: #fff; padding: 1rem; font-family: var(--font-mono); font-size: 0.9rem;">
+                        <input type="email" placeholder="Email" required
+                            style="background: rgba(0,0,0,0.5); border: 1px solid var(--border-color); color: #fff; padding: 1rem; font-family: var(--font-mono); font-size: 0.9rem;">
+                    </div>
+
+                    <select required
+                        style="background: rgba(0,0,0,0.5); border: 1px solid var(--border-color); color: #fff; padding: 1rem; font-family: var(--font-mono); font-size: 0.9rem; cursor: pointer;">
+                        <option value="">Subject</option>
+                        <option value="general">General Question</option>
+                        <option value="beta">Beta Access</option>
+                        <option value="tech">Technical Issue</option>
+                        <option value="collab">Collaboration</option>
+                    </select>
+
+                    <textarea placeholder="Your Message" required
+                        style="background: rgba(0,0,0,0.5); border: 1px solid var(--border-color); color: #fff; padding: 1rem; font-family: var(--font-mono); font-size: 0.9rem; min-height: 150px; resize: vertical;"></textarea>
+
+                    <button type="submit" class="btn-solid" style="padding: 1rem; font-size: 1rem;">Send
+                        Message</button>
+
+                    <p style="text-align: center; font-size: 0.75rem; color: var(--text-dim); margin-top: 0.5rem;">
+                        We typically respond within 24–48 hours.
+                    </p>
+                </form>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="font-size: 0.9rem; color: var(--text-dim); margin-bottom: 0.5rem;">Prefer email?</p>
+                <a href="mailto:contact@novaprep.in"
+                    style="color: var(--text-primary); font-family: var(--font-mono); font-weight: 600; text-decoration: none;">contact@novaprep.in</a>
+
+                <p style="margin-top: 3rem; font-size: 0.75rem; color: var(--text-dim); font-style: italic;">
+                    NovaPrep is currently in private beta. Feature requests and feedback are welcome.
+                </p>
             </div>
         </div>
     </main>
@@ -109,8 +148,8 @@
                 We do not share personal data with third parties. <a href="privacy.html"
                     style="color: var(--text-dim); text-decoration: underline;">See our Privacy Policy.</a>
             </div>
-
-            <div style="font-size: 0.75rem; color: var(--text-dim); width: 100%; text-align: center; margin-top: 0.5rem;">
+            <div
+                style="font-size: 0.75rem; color: var(--text-dim); width: 100%; text-align: center; margin-top: 0.5rem;">
                 NovaPrep is currently in beta. Features may evolve before launch.
             </div>
         </div>
