@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secure Access | Initialize Neural Link - NovaPrep</title>
+    <title>Secure Access - NovaPrep</title>
     <meta name="description"
         content="Authenticate to access the NovaPrep vault and begin your AI interview simulation. Establish your profile and prep topology.">
     <meta name="keywords" content="login, signup, authenticate, MBA vault, secure access">
@@ -60,23 +60,24 @@
             <a href="index.html" class="logo">Nova<span>Prep</span></a>
             <div class="nav-links">
                 <a href="index.html">// Home</a>
-                <a href="learn-more.html">// Features</a>
+                <a href="learn-more.html">// How It Works</a>
                 <a href="cases.html">// Interviews</a>
-                <a href="pricing.html">// Pricing</a>
+                <a href="pricing.html">// Plans</a>
                 <a href="about.html">// About</a>
             </div>
         </div>
         <div class="nav-right">
-            <a href="sign-in.html" class="btn-solid">Get Started</a>
+            <a href="sign-in.html" class="btn-solid" title="Start a 5-minute mock — no credit card">Get Started</a>
         </div>
     </nav>
 
-    <div class="auth-wrapper" style="margin-top: 80px; min-height: calc(100vh - 80px);">
+    <div class="auth-wrapper"
+        style="margin-top: 80px; min-height: calc(100vh - 80px); height: auto; flex-direction: column; gap: 2rem; padding: 2rem 0; box-sizing: border-box;">
 
         <div class="auth-box card-bracket" id="login-container">
-            <h2 style="font-size: 2rem; margin-bottom: 0.5rem; letter-spacing: -0.03em;">Welcome Back</h2>
-            <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-dim); margin-bottom: 2rem;">//
-                AUTHENTICATE TO ACCESS PREP VAULT</p>
+            <h2 style="font-size: 2rem; margin-bottom: 0.5rem; letter-spacing: -0.03em;">Welcome</h2>
+            <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-dim); margin-bottom: 2rem;">—
+                log in to access your practice vault and session history.</p>
 
             <form class="auth-form" onsubmit="event.preventDefault(); alert('Authentication simulated.');">
                 <input type="email" class="input-box" placeholder="Email Address" required>
@@ -92,10 +93,24 @@
             </p>
         </div>
 
+        <!-- NEW DEMO PLACEHOLDER -->
+        <div class="demo-placeholder card-bracket"
+            style="max-width: 450px; width: 100%; border: 1px solid rgba(255,255,255,0.05); padding: 1.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; background: rgba(10, 10, 12, 0.4);">
+            <div
+                style="width: 100%; aspect-ratio: 16/9; background: #1a1a1f; border-radius: 4px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; border: 1px dashed rgba(255,255,255,0.1);">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    style="opacity: 0.3;">
+                    <path d="M8 5v14l11-7z" fill="currentColor" />
+                </svg>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--text-dim);">See a sample mock — no login required.</p>
+        </div>
+        <!-- END DEMO PLACEHOLDER -->
+
         <div class="auth-box card-bracket" id="register-container" style="display: none; max-width: 480px;">
             <h2 style="font-size: 2rem; margin-bottom: 0.5rem; letter-spacing: -0.03em;">Initialize Profile</h2>
             <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-dim); margin-bottom: 2rem;">//
-                ESTABLISH NEURAL LINK</p>
+                ESTABLISH CONNECTION</p>
 
             <form class="auth-form" onsubmit="event.preventDefault(); alert('Registration simulated.');">
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
@@ -129,18 +144,18 @@
             <div class="footer-info">
                 <a href="index.html" class="logo">Nova<span>Prep</span></a>
                 <p style="margin-top: 1.5rem; color: var(--text-dim); line-height: 1.6; font-size: 0.9rem;">
-                    The algorithmic intersection of admissions expertise and neural computation. Calibrated for the next
-                    generation of MBA leaders.
+                    Admissions expertise meets structured AI simulation. Practice the panel styles used by top
+                    B-Schools.
                 </p>
-                <div class="footer-status">
-                    <span class="status-dot"></span>
-                    // STATUS: ALL SYSTEMS NOMINAL
+                <div class="footer-status" title="Live demo available — try a quick mock.">
+                    <span class="status-dot" style="background: rgba(255, 255, 255, 0.4); box-shadow: none;"></span>
+                    // STATUS: ACTIVE
                 </div>
             </div>
 
             <div class="footer-nav">
                 <div class="footer-col">
-                    <h4>// PLATFORM</h4>
+                    <h4>Platform —</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="learn-more.html">Features</a></li>
@@ -148,27 +163,37 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>// ADMISSIONS</h4>
+                    <h4>Company —</h4>
                     <ul>
-                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="pricing.html">Plans</a></li>
                         <li><a href="about.html">About</a></li>
-                        <li><a href="sign-in.html">Initialize Link</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>// CONNECT</h4>
+                    <h4>Support —</h4>
                     <ul>
-                        <li><a href="#">Terminal</a></li>
-                        <li><a href="#">Neural_Net</a></li>
-                        <li><a href="#">Topology</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Demo</a></li>
+                        <li><a href="privacy.html">Privacy</a></li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <div class="footer-bottom">
-            <div>&copy; 2026 NOVAPREP // QUANTUM NEURAL COMPUTING DIV.</div>
-            <div class="footer-brand">POWERED BY <span>GEMINI_ULTRA</span></div>
+        <div class="footer-bottom" style="flex-direction: column; align-items: flex-start; gap: 1rem;">
+            <div style="display: flex; justify-content: space-between; width: 100%;">
+                <div>&copy; 2026 NovaPrep — AI interview simulation.</div>
+                <div class="footer-brand">Built on modern LLM infrastructure.</div>
+            </div>
+            <div style="font-size: 0.75rem; color: var(--text-dim); width: 100%; text-align: center;">
+                We do not share personal data with third parties. <a href="privacy.html"
+                    style="color: var(--text-dim); text-decoration: underline;">See our Privacy Policy.</a>
+            </div>
+
+            <div style="font-size: 0.75rem; color: var(--text-dim); width: 100%; text-align: center; margin-top: 0.5rem;">
+                NovaPrep is currently in beta. Features may evolve before launch.
+            </div>
         </div>
     </footer>
 
@@ -177,12 +202,15 @@
         function toggleAuth(view) {
             const login = document.getElementById('login-container');
             const register = document.getElementById('register-container');
+            const demo = document.querySelector('.demo-placeholder');
 
             if (view === 'register') {
                 login.style.display = 'none';
+                if (demo) demo.style.display = 'none';
                 register.style.display = 'flex';
             } else {
                 login.style.display = 'flex';
+                if (demo) demo.style.display = 'flex';
                 register.style.display = 'none';
             }
         }
